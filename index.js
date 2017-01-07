@@ -10,6 +10,7 @@ app.get('/getinfo',function(req,res){
     req.connection.remoteAddress ||
     req.socket.remoteAddress ||
     req.connection.socket.remoteAddress;
+    ipAddress = ipAddress.substr(7);
 	var r = uaParser.parse(req.headers['user-agent']);
 	console.log(ipAddress);
 	obj = {
