@@ -6,8 +6,12 @@ var app = express();
 var obj;
 
 app.get('/getinfo',function(req,res){
-	var ipAddress = req.headers['x-forwarded-for'];
+	var ipAddress = req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;
 	var r = uaParser.parse(req.headers['user-agent']);
+	console.log(ipAddress);
 	obj = {
 		'ipaddress': req.ip,
 		'language': accepts(req).languages()[0],
