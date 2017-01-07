@@ -6,15 +6,14 @@ var app = express();
 var obj;
 
 app.get('/getinfo',function(req,res){
+	var ipAddress = req.headers['x-forwarded-for'];
 	var r = uaParser.parse(req.headers['user-agent']);
-	console.log(r.os.toString());
 	obj = {
 		'ipaddress': req.ip,
 		'language': accepts(req).languages()[0],
 		'software': r.os.toString(),
 	}
-
-	console.log(obj);
+	console.log(req.headers);
 	res.send(obj);
 })
 
