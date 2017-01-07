@@ -14,7 +14,7 @@ app.get('/getinfo',function(req,res){
 	var r = uaParser.parse(req.headers['user-agent']);
 	console.log(ipAddress);
 	obj = {
-		'ipaddress': req.ip,
+		'ipaddress': ipAddress,
 		'language': accepts(req).languages()[0],
 		'software': r.os.toString(),
 	}
