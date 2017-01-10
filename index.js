@@ -6,7 +6,7 @@ var accepts = require('accepts');
 var app = express();
 var obj;
 
-app.use('/',express.static(path.join(__dirname,'src')))
+app.use('/',express.static(path.join(__dirname,'public')))
 
 app.get('/getinfo',function(req,res){
 	var ipAddress = req.headers["x-forwarded-for"];
