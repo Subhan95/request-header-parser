@@ -9,7 +9,7 @@ An API that returns a host's IP address, OS and preferred language
 1. [node](https://nodejs.org/en/)
 2. [npm](https://www.npmjs.com)
 
-###Installing
+###Installation
 Clone the project
 
 ```git
