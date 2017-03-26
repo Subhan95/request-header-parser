@@ -1,15 +1,15 @@
-#Request Header Parser
+# Request Header Parser
 
 An API that returns a host's IP address, OS and preferred language
 
-##Getting Started
+## Getting Started
 
-###Prerequisites
+### Prerequisites
 
 1. [node](https://nodejs.org/en/)
 2. [npm](https://www.npmjs.com)
 
-###Installation
+### Installation
 Clone the project
 
 ```git
@@ -24,7 +24,7 @@ npm install
 
 to install the dependencies
 
-##Usage
+## Usage
 
 [/getinfo](https://grandiose-mailbox.gomix.me/getinfo)
 
@@ -33,10 +33,10 @@ Returns
 {"ipaddress":"ip_addr","language":"pref_language","software":"OS_name"}
 ```
 
-##Builtwith
+## Builtwith
 [express](https://expressjs.com/)   
 
 View other dependencies in package.json
 
-##Licensing
+## Licensing
 MIT
